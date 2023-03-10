@@ -21,6 +21,8 @@ jobs:
 
       - name: Create Pull Request
         # If it's not a Pull Request then commit any changes as a new PR.
+        # Enable access permission for GitHub Action to create pull requests.
+        # For info, check https://stackoverflow.com/questions/72376229/github-actions-is-not-permitted-to-create-or-approve-pull-requests-createpullre
         uses: peter-evans/create-pull-request@v3
         with:
           title: Auto Compress Images
